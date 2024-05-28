@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CND Scientific Publications Library</title>
+    <link rel="icon" href="https://cndlifesciences.com/wp-content/uploads/2021/02/cropped-android-chrome-512x512-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="scripts.js"></script>
+
+<img src="https://cndlifesciences.com/wp-content/uploads/2024/04/cnd.png" alt="CND Logo">
+<h1>SCIENTIFIC PUBLICATION LIBRARY</h1>
+
+<div class="filter-box">
+    <div class="filter-left">
+        <label for="subSpecialty">Filter by Physician Sub-Specialty:</label>
+        <select id="subSpecialty" name="subSpecialty" onchange="filterByDropdown('subSpecialty')">
+            <option value="">Show All</option>
+            <option value="Movement Disorders">Movement Disorders</option>
+            <option value="Geriatric Neurology">Geriatric Neurology</option>
+            <option value="Autonomic Disorders">Autonomic Disorders</option>
+            <option value="Neuromuscular Disorders">Neuromuscular Disorders</option>
+            <option value="Sleep Specialists">Sleep Specialists</option>
+        </select>
+
+        <label for="productDropdown">Filter by Related Product:</label>
+        <select id="productDropdown" onchange="filterByDropdown('productDropdown')">
+            <option value="">Show All</option>
+            <option value="Syn-One Test">Syn-One Test</option>
+            <option value="Small-Fiber Dx">Small-Fiber Dx</option>
+            <option value="Aut-One">Aut-One</option>
+        </select>
+
+        <label for="authorDropdown">Filter by Author:</label>
+        <select id="authorDropdown" onchange="filterByDropdown('authorDropdown')">
+            <option value="">Show All</option>
+            <option value="CND Founder">CND Founder</option>
+            <option value="3rd Party">3rd Party</option>
+
+        </select>
+
+    <div class="clear-filters">
+        <button id="clearFiltersButton" onclick="clearFilters()">Clear Filters</button>
+        <div class="results-count" id="resultsCount"></div>
+    </div>
+
+    </div>
+    <div class="filter-right">
+        <label for="journalNameSearch">Search by Publication Name:</label>
+        <input type="text" id="journalNameSearch" onkeyup="searchByField('journalNameSearch')" placeholder="Type to search...">
+
+        <label for="tagSearch">Search by Content Tag:</label>
+        <input type="text" id="tagSearch" onkeyup="searchByField('tagSearch')" placeholder="Type to search...">
+    </div>
+</div>
+
+
+<div id="referencesCards" class="card-container">
+    <div class="card">
+        <div class="card-content">
+            <h3>Synuclein-One study: skin biopsy detection of phosphorylated α-synuclein for diagnosis of synucleinopathies</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/35272481/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/35272481/</a></p>
+            <p><strong>Content Tags:</strong> Multiple system atrophy (MSA), Parkinson’s disease (PD), alpha-synuclein, synucleinopathies</p>
+            <p><strong>Neurology Sub-Specialty:</strong> Geriatric Neurology, Autonomic Disorders, Neuromuscular Disorders</p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Gibbons CH, Freeman R, Bellaire B, Adler CH, Moore D, Levine T. Synuclein-One study: skin biopsy detection of phosphorylated α-synuclein for diagnosis of synucleinopathies.<i>Biomark Med.</i> 2022;16(7):499-509. doi:10.2217/bmm-2021-0646</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3><i>X-linked dystonia-parkinsonism ("Lubag") may present with peripheral synucleinopathy</i></h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/34582053/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/34582053/</a></p>
+            <p><strong>Content Tags:</strong> dystonia parkinsonism, dystonic disorders, synucleionapthies</p>
+            <p><strong>Neurology Sub-Specialty:</strong> Neuromuscular Disorders</p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Evidente VGH, Evidente DH, Ortega SC, Levine TD, Freeman R, Gibbons CH. X-linked dystonia-parkinsonism ("Lubag") may present with peripheral synucleinopathy.<i>Mov Disord.</i> 2022;37(1):130-136. doi:10.1002/mds.28801</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Cutaneous alpha-synuclein deposition in postural tachycardia patients</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/33764697/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/33764697/</a></p>
+            <p><strong>Content Tags:</strong> Phosporylation, Postural Orthostatic Tachycardia Syndrome, alpha-synuclein, synucleinopathies</p>
+            <p><strong>Neurology Sub-Specialty:</strong></p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Levine TD, Bellaire B, Gibbons C, Freeman R. Cutaneous alpha-synuclein deposition in postural tachycardia patients.<i>Ann Clin Transl Neurol.</i> 2021;8(4):908-917. doi:10.1002/acn3.51347</p>
+        </div>
+	</div>
+   <div class="card">
+        <div class="card-content">
+            <h3>Consistent skin alpha-synuclein positivity in REM sleep behavior disorder - A two center two-to-four-year follow-up study</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/33895068/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/33895068/</a></p>
+            <p><strong>Content Tags:</strong> Parkinson’s disease (PD), prodromal symptoms, REM sleep behavior disorder (RBD), alpha-synculein, synucleinopathies, Lewy Body disease (LBD)</p>
+            <p><strong>Neurology Sub-Specialty:</strong></p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> 3rd Party</p>
+            <p><strong>Publication Reference:</strong> Doppler K, Antelmi E, Kuzkina A, et al. Consistent skin alpha-synuclein positivity in REM sleep behavior disorder - A two center two-to-four-year follow-up study. <i>Parkinsonism Relat Disord.</i> 2021;86:108-113.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Cutaneous alpha-synuclein is correlated with autonomic impairment in isolated rapid eye movement sleep behavior disorder</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/34244806/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/34244806/</a></p>
+            <p><strong>Content Tags:</strong> Autonomic Nervous System, Parkinson’s disease (PD), Primary dysautonomias, REM sleep behavior disorder (RBD), alpha-synuclein</p>
+            <p><strong>Neurology Sub-Specialty:</strong></p>
+            <p><strong>Related Product:</strong></p>
+            <p><strong>Author:</strong> 3rd Party</p>
+            <p><strong>Publication Reference:</strong> Miglis MG, Zitser J, Schneider L, et al. Cutaneous -synuclein is correlated with autonomic impairment in isolated rapid eye movement sleep behavior disorder. <i>Sleep.</i> 2021;44(12):zsab172. doi:10.1093/sleep/zsab172</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Skin biopsy in evaluation of autonomic disorders</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31996629/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/31996629/</a></p>
+            <p><strong>Content Tags:</strong> Autonomic Nervous System Diseases, Central Nervous System Diseases</p>
+            <p><strong>Neurology Sub-Specialty:</strong></p>
+            <p><strong>Related Product:</strong></p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Gibbons CH, Wang N, Kim JY, Campagnolo M, Freeman R. Skin biopsy in evaluation of autonomic disorders.<i>Continuum (Minneap Minn).</i> 2020;26(1):200-212. doi:10.1212/CON.0000000000000814</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Phosphorylated alpha-synuclein within cutaneous autonomic nerves of patients with Parkinson's disease: the implications of sample thickness on results</h3>
+            <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31996629/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/31996629/</a></p>
+            <p><strong>Content Tags:</strong> Autonomic Pathways, Parkinson’s disease (PD), phosphorylation, alpha-synuclein</p>
+            <p><strong>Neurology Sub-Specialty:</strong></p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Wang N, Garcia J, Freeman R, Gibbons CH. Phosphorylated alpha-synuclein within cutaneous autonomic nerves of patients with Parkinson's disease: the implications of sample thickness on results.<i>J Histochem Cytochem.</i>2020;68(10):669-678. doi:10.1369/0022155420960250</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Alpha-synuclein in skin nerve fibers as a biomarker for alpha-synucleinopathies</h3>
+            <p><strong>URL:</strong> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6444158/" target="_blank">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6444158/</a></p>
+            <p><strong>Content Tags:</strong> alpha-synuclein, Parkinson’s disease (PD), Lewy bodies, multiple system atrophy (MSA), pure autonomic failure (PAF), synucleinopathies, autonomic and somatosensory fibers, phosphorylated alpha-synuclein</p>
+            <p><strong>Neurology Sub-Specialty:</strong> Movement Disorders</p>
+            <p><strong>Related Product:</strong> Syn-One Test</p>
+            <p><strong>Author:</strong> CND Founder</p>
+            <p><strong>Publication Reference:</strong> Kim JY, Illigens BM, McCormick MP, Wang N, Gibbons CH. Alpha-synuclein in skin nerve fibers as a biomarker for alpha-synucleinopathies.<i>J Clin Neurol.</i>2019;15(2):135-142. doi:10.3988/jcn.2019.15.2.135</p>
+        </div>
+    </div>
+<div class="card">
+    <div class="card-content">
+        <h3>Association of innervation-adjusted alpha-synuclein in arrector pili muscles with cardiac noradrenergic deficiency in autonomic synucleinopathies</h3>
+        <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31673840/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/31673840/</a></p>
+        <p><strong>Content Tags:</strong> Multiple system atrophy (MSA), neurogenic orthostatic hypotension (nOh), alpha-synuclein, arrector pili muscles, 18F- Dopamine PET</p>
+        <p><strong>Neurology Sub-Specialty:</strong> Autonomic Disorders, Movement Disorders</p>
+        <p><strong>Related Product:</strong> Syn-One Test</p>
+        <p><strong>Author:</strong> CND Founder</p>
+        <p><strong>Publication Reference:</strong> Isonaka R, Gibbons CH, Wang N, Freeman R, Goldstein DS. Association of innervation-adjusted alpha-synuclein in arrector pili muscles with cardiac noradrenergic deficiency in autonomic synucleinopathies.<i>Clin Auton Res.</i>2019;29(6):587-593. doi:10.1007/s10286-019-00644-6</p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h3>Abnormal α-synuclein deposits in skin nerves: intra-and inter-laboratory reproducibility</h3>
+        <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/30770596/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/30770596/</a></p>
+        <p><strong>Content Tags:</strong> Parkinson’s disease (PD), REM sleep behavior disorder (RBD), Dementia with Lewy Bodies (DLB), multiple system atrophy (MSA), skin biopsy, phosphorylated alpha-synuclein, Protein Gene Product 9.5 (PGP 9.5)</p>
+        <p><strong>Neurology Sub-Specialty:</strong> Movement Disorders</p>
+        <p><strong>Related Product:</strong> Syn-One Test</p>
+        <p><strong>Author:</strong> 3rd Party</p>
+        <p><strong>Publication Reference:</strong> Donadio V, Doppler K, Incensi A, et al. Abnormal α-synuclein deposits in skin nerves: intra-and inter-laboratory reproducibility.<i>Eur J Neurol.</i> 2019;26(10):1245-1251. doi:10.1111/ene.13939</p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h3>Skin nerve alpha-synuclein deposits in Parkinson's disease and other synucleinopathies: a review</h3>
+        <p><strong>URL:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/30506233/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/30506233/</a></p>
+        <p><strong>Content Tags:</strong> Pure autonomic failure (PAF), autonomic failure, synucleinopathies, skin biopsy, autonomic nerves, indirect immunofluorescence, alpha-synculein</p>
+        <p><strong>Neurology Sub-Specialty:</strong> Movement Disorders, Autonomic Disorders</p>
+        <p><strong>Related Product:</strong> Syn-One Test</p>
+        <p><strong>Author:</strong> 3rd Party</p>
+        <p><strong>Publication Reference:</strong> Donadio V. Skin nerve alpha-synuclein deposits in Parkinson's disease and other synucleinopathies: a review.<i>Clin Auton Res.</i>2019;29(6):577-585. doi:10.1007/s10286-018-0581-4</p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h3>Skin alpha-synuclein deposits differ in clinical variants of synucleinopathy: an in vivo study</h3>
+        <p><strong>URL:</strong> <a href="https://www.nature.com/articles/s41598-018-32588-8" target="_blank">https://www.nature.com/articles/s41598-018-32588-8</a></p>
+        <p><strong>Content Tags:</strong> synucleinopathies, multiple system atrophy (MSA), pure autonomic failure (PAF), dementia with Lewy bodies (DLB), idiopathic Parkinson’s disease, differentiation of synucleinopathies, synuclein signatures, autonomic and somatic fibers, alpha-synculein, phosphorylated alpha-synuclein (p-syn), skin biopsy</p>
+        <p><strong>Neurology Sub-Specialty:</strong> Movement Disorders, Autonomic Disorders</p>
+        <p><strong>Related Product:</strong> Syn-One Test</p>
+        <p><strong>Author:</strong> 3rd Party</p>
+        <p><strong>Publication Reference:</strong> Donadio V, Incensi A, El-Agnaf O, et al. Skin alpha-synuclein deposits differ in clinical variants of synucleinopathy: an in vivo study.<i>Sci Rep.</i>2018;8(1):14246. doi:10.1038/s41598-018-32588-8</p>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

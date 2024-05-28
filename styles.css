@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Changed background color to white */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Barlow Condensed', sans-serif; /* Use Barlow Condensed for h1 */
+    color: #26AAB7;
+    font-size: 40px;
+}
+
+.filter-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-left, .filter-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-left {
+    margin-right: 20px;
+}
+
+.filter-left label, .filter-right label {
+    margin-bottom: 5px;
+}
+
+.filter-left select, .filter-right input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.filter-right input {
+    width: 80%;
+}
+
+.filter-left button {
+    background-color: #13274E;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.filter-left button:hover {
+    background-color: #1e8d9b;
+}
+
+.results-count {
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    min-width: 300px; /* Ensures cards are not too narrow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move card slightly up on hover */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* Enhance shadow on hover */
+}
+
+.card-content h3 {
+    color: #13274E;
+}
+
+.card-content p {
+    color: #333333;
+    margin: 10px 0;
+}
+
+.card-content a {
+    color: #26AAB7;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
